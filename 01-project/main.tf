@@ -40,6 +40,6 @@ resource "azurerm_linux_virtual_machine" "test" {
   }
 
   source_image_reference {
-       source_image_id = "/subscriptions/1d201e0e-d52e-420e-b665-bc3974b6a17f/resourceGroups/denmark_east/providers/Microsoft.Compute/galleries/padmasrikanthiamge"
+       id = "/subscriptions/1d201e0e-d52e-420e-b665-bc3974b6a17f/resourceGroups/denmark_east/providers/Microsoft.Compute/galleries/padmasrikanthiamge"
   }
 }
