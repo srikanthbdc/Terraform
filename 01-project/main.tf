@@ -24,21 +24,19 @@ resource "azurerm_linux_virtual_machine" "test" {
   name                = "test-vm"
   resource_group_name = "denmark_east-rg"
   location            = "Denmark East"
-  size                = "Standard_F2"
+  size                = "Standard_D2s_v3"
   admin_username      = "devops"
   admin_password      = "Devops123456"
   disable_password_authentication = false
-  network_interface_ids = [
-    azurerm_network_interface.test.id,
-  ]
+  network_interface_ids = [azurerm_network_interface.test.id]
 
   
 
   os_disk {
     caching              = "ReadWrite"
-    storage_account_type = "Standard_D2s_v3"
+    storage_account_type = "Standard_LRS"
   }
 
-  source_image_id  = "/subscriptions/1d201e0e-d52e-420e-b665-bc3974b6a17f/resourceGroups/denmark_east/providers/Microsoft.Compute/galleries/padmasrikanthiamge"
+   source_image_id  = "/subscriptions/1d201e0e-d52e-420e-b665-bc3974b6a17f/resourceGroups/denmark_east/providers/Microsoft.Compute/galleries/padmasrikanthiamge/images/1.0.0/versions/1.0.0"
   
 }
