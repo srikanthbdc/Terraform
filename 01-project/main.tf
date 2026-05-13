@@ -39,7 +39,6 @@ resource "azurerm_linux_virtual_machine" "test" {
     storage_account_type = "Standard_D2s_v3"
   }
 
-  source_image_reference {
-       id = "/subscriptions/1d201e0e-d52e-420e-b665-bc3974b6a17f/resourceGroups/denmark_east/providers/Microsoft.Compute/galleries/padmasrikanthiamge"
-  }
+  source_image_id  = "/subscriptions/1d201e0e-d52e-420e-b665-bc3974b6a17f/resourceGroups/denmark_east/providers/Microsoft.Compute/galleries/padmasrikanthiamge"
+  
 }
