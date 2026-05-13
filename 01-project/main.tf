@@ -17,7 +17,7 @@ provider "azurerm" {
 resource "azurerm_network_interface" "test" {
   name                = "test-nic"
   location            = "Denmark East"
-  resource_group_name = "denmark_east-rg"
+  resource_group_name = "denmark_east"
 
   ip_configuration {
     name                          = "internal"
@@ -28,7 +28,7 @@ resource "azurerm_network_interface" "test" {
 
 resource "azurerm_linux_virtual_machine" "test" {
   name                = "test-vm"
-  resource_group_name = "denmark_east-rg"
+  resource_group_name = "denmark_east"
   location            = "Denmark East"
   size                = "Standard_D2s_v3"
   admin_username      = "devops"
